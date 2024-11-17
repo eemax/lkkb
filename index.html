@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lindqvist Konsult | Future-Ready Business Solutions</title>
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2b4c7e;
+            --accent: #88c0d0;
+            --light: #eceff4;
+            --dark: #2e3440;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        body {
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 8rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom right, transparent 49%, var(--light) 51%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .expertise-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .expertise-tag {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .value-props {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .value-prop {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.9);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .highlight {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 4rem 0 2rem;
+            color: var(--primary);
+        }
+
+        .nordic-pattern {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin: 2rem 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Lindqvist Konsult</h1>
+        <p style="font-size: 1.5rem; max-width: 800px; margin: 0 auto;">
+            Guiding Nordic Businesses Through Digital Transformation & Regulatory Excellence
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="expertise-list">
+            <span class="expertise-tag">EU Compliance</span>
+            <span class="expertise-tag">Product Data Management</span>
+            <span class="expertise-tag">Sustainability Reporting</span>
+            <span class="expertise-tag">AI Integration</span>
+            <span class="expertise-tag">Process Automation</span>
+            <span class="expertise-tag">Digital Transformation</span>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Product Data Excellence</h3>
+                <p>Master data management strategies aligned with ESRS, GRI, and emerging EU regulations. Future-proof your product information ecosystem.</p>
+            </div>
+            <div class="service-card">
+                <h3>Compliance & Reporting</h3>
+                <p>Navigate complex EU regulations with confidence. From CSRD to ESRS, we ensure your reporting meets every requirement.</p>
+            </div>
+            <div class="service-card">
+                <h3>AI & Automation</h3>
+                <p>Implement smart solutions for business process automation and AI integration, tailored to Nordic market needs.</p>
+            </div>
+        </div>
+
+        <div class="nordic-pattern">
+            <h2>Why Choose Lindqvist Konsult?</h2>
+            <p>Deep expertise in Nordic business culture combined with cutting-edge technical knowledge and regulatory insight.</p>
+        </div>
+
+        <div class="value-props">
+            <div class="value-prop">
+                <h3>Future-Ready Solutions</h3>
+                <p>Stay ahead of regulatory changes and technological advancements</p>
+            </div>
+            <div class="value-prop">
+                <h3>Nordic Excellence</h3>
+                <p>Local expertise with global perspective</p>
+            </div>
+            <div class="value-prop">
+                <h3>Practical Innovation</h3>
+                <p>Actionable solutions that drive real business value</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Our Focus Areas</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Strategic Consulting</h3>
+                <ul style="list-style: none;">
+                    <li>• Digital Transformation Roadmaps</li>
+                    <li>• Regulatory Compliance Strategy</li>
+                    <li>• Sustainability Integration</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>Technical Implementation</h3>
+                <ul style="list-style: none;">
+                    <li>• Product Data Management Systems</li>
+                    <li>• AI & Automation Solutions</li>
+                    <li>• Reporting Tools Integration</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>Ongoing Support</h3>
+                <ul style="list-style: none;">
+                    <li>• Regulatory Updates</li>
+                    <li>• System Optimization</li>
+                    <li>• Training & Knowledge Transfer</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
