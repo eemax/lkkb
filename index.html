@@ -3,203 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lindqvist Konsult | Future-Ready Business Solutions</title>
+    <title>Lindqvist Konsult – Expert Consultancy for Modern Businesses</title>
+    <meta name="description" content="Lindqvist Konsult offers personalized consultancy services, specializing in AI implementation and digital transformation for European businesses.">
+    <meta name="keywords" content="Lindqvist Konsult, AI consultancy, digital transformation, EU data compliance, Centric PLM, master data management, sustainability reporting">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #1a365d;
-            --secondary: #2b4c7e;
-            --accent: #88c0d0;
-            --light: #eceff4;
-            --dark: #2e3440;
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', system-ui, sans-serif;
         }
-
         body {
-            background: var(--light);
-            color: var(--dark);
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            background-color: #f5f7fa;
             line-height: 1.6;
         }
 
-        .hero {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #00b4d8, #0077b6);
             color: white;
-            padding: 8rem 2rem;
             text-align: center;
+            padding: 60px 20px;
             position: relative;
-            overflow: hidden;
+        }
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.4rem;
+            opacity: 0.85;
         }
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100px;
-            background: linear-gradient(to bottom right, transparent 49%, var(--light) 51%);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .expertise-list {
+        /* Introduction Section */
+        .intro {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
-            margin: 2rem 0;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            padding: 40px 20px;
+            margin: 30px auto;
+            border-radius: 16px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+            max-width: 1200px;
         }
-
-        .expertise-tag {
-            background: var(--accent);
-            color: var(--primary);
-            padding: 0.5rem 1rem;
+        .intro-text {
+            flex: 1 1 60%;
+            padding-right: 25px;
+        }
+        .intro-text h2 {
+            font-size: 2rem;
+            color: #00b4d8;
+            margin-bottom: 15px;
+        }
+        .intro-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        .cta-button {
+            flex: 1 1 30%;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 1.1rem;
+            color: #0077b6;
+            background-color: white;
+            border: 2px solid #0077b6;
             border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            width: 200px;
+            display: block;
+            margin: 0 auto;
+        }
+        .cta-button:hover {
+            color: white;
+            background-color: #00b4d8;
+            border-color: #00b4d8;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
-        .value-props {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
+        /* Content Sections */
+        section {
+            background: white;
+            padding: 40px 20px;
+            margin: 30px auto;
+            border-radius: 16px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+            max-width: 1200px;
+        }
+        section h2 {
+            color: #00b4d8;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        section p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        section ul {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-left: 25px;
+            list-style-type: disc;
         }
 
-        .value-prop {
+        /* Footer */
+        footer {
             text-align: center;
-            padding: 2rem;
-            background: rgba(255,255,255,0.9);
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px 0;
+            background-color: #eef3f7;
+            font-size: 0.95rem;
+            margin-top: 25px;
+        }
+        footer a {
+            color: #00b4d8;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
 
-        .highlight {
-            color: var(--secondary);
-            font-weight: 600;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .intro {
+                flex-direction: column;
+                text-align: center;
+            }
+            .intro-text {
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
         }
-
-        .section-title {
-            text-align: center;
-            margin: 4rem 0 2rem;
-            color: var(--primary);
-        }
-
-        .nordic-pattern {
-            border-left: 4px solid var(--accent);
-            padding-left: 1rem;
-            margin: 2rem 0;
-        }
-
     </style>
 </head>
 <body>
-    <div class="hero">
-        <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Lindqvist Konsult</h1>
-        <p style="font-size: 1.5rem; max-width: 800px; margin: 0 auto;">
-            Guiding Nordic Businesses Through Digital Transformation & Regulatory Excellence
-        </p>
+
+<header>
+    <h1>Lindqvist Konsult</h1>
+    <p>Personalized Consultancy for Modern Businesses</p>
+</header>
+
+<div class="intro">
+    <div class="intro-text">
+        <h2>Hi, I’m Max Lindqvist</h2>
+        <p>I’m the person behind Lindqvist Konsult. As a solopreneur, I work closely with my clients to provide practical, tailored solutions that make a real difference. My focus is on helping businesses thrive in today’s fast-paced, tech-driven world.</p>
+        <p>When you choose Lindqvist Konsult, you’re not just getting a consultant—you’re getting a dedicated partner who’s as invested in your success as you are. I keep things personal, practical, and tailored to your unique challenges.</p>
+        <p>Let’s have a conversation about how I can help your business move forward.</p>
     </div>
+    <a href="https://lkkb.se/cv" class="cta-button">View My CV</a>
+</div>
 
-    <div class="container">
-        <div class="expertise-list">
-            <span class="expertise-tag">EU Compliance</span>
-            <span class="expertise-tag">Product Data Management</span>
-            <span class="expertise-tag">Sustainability Reporting</span>
-            <span class="expertise-tag">AI Integration</span>
-            <span class="expertise-tag">Process Automation</span>
-            <span class="expertise-tag">Digital Transformation</span>
-        </div>
+<section>
+    <h2>agents.md – Bring AI to Your Team</h2>
+    <p>AI can be a game-changer, and I’m here to make it simple for your business. With <strong>agents.md</strong>, I offer a complete service to help you roll out AI tools for your employees. Whether it’s:</p>
+    <ul>
+        <li>General-purpose chatbots to answer everyday questions,</li>
+        <li>AI agents like Perplexity to speed up research,</li>
+        <li>Productivity bots to save time on repetitive tasks, or</li>
+        <li>Custom-built agents with secure access to your company data,</li>
+    </ul>
+    <p>I’ll ensure everything is easy to use, secure, and perfectly tailored to your needs. Let’s get your team working smarter, not harder.</p>
+</section>
 
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Product Data Excellence</h3>
-                <p>Master data management strategies aligned with ESRS, GRI, and emerging EU regulations. Future-proof your product information ecosystem.</p>
-            </div>
-            <div class="service-card">
-                <h3>Compliance & Reporting</h3>
-                <p>Navigate complex EU regulations with confidence. From CSRD to ESRS, we ensure your reporting meets every requirement.</p>
-            </div>
-            <div class="service-card">
-                <h3>AI & Automation</h3>
-                <p>Implement smart solutions for business process automation and AI integration, tailored to Nordic market needs.</p>
-            </div>
-        </div>
+<section>
+    <h2>AI-Powered Copywriting and Translations</h2>
+    <p>Writing product descriptions and translating them for different markets can be a chore. Let AI handle it! I use the latest AI models to automate these tasks, creating consistent, high-quality content in no time. You’ll save time, reduce costs, and ensure your messaging works seamlessly across languages.</p>
+</section>
 
-        <div class="nordic-pattern">
-            <h2>Why Choose Lindqvist Konsult?</h2>
-            <p>Deep expertise in Nordic business culture combined with cutting-edge technical knowledge and regulatory insight.</p>
-        </div>
+<section>
+    <h2>Product Profiles and Digital Passports</h2>
+    <p>Digital product passports are the future of compliance and transparency, and I can help you get there. I’ll take your product data and transform it into compliant <strong>Digital Product Profiles</strong>, ready to meet the latest standards. Want to take it further? I can help you engrave these profiles onto unique product identifiers for full traceability and customer trust.</p>
+</section>
 
-        <div class="value-props">
-            <div class="value-prop">
-                <h3>Future-Ready Solutions</h3>
-                <p>Stay ahead of regulatory changes and technological advancements</p>
-            </div>
-            <div class="value-prop">
-                <h3>Nordic Excellence</h3>
-                <p>Local expertise with global perspective</p>
-            </div>
-            <div class="value-prop">
-                <h3>Practical Innovation</h3>
-                <p>Actionable solutions that drive real business value</p>
-            </div>
-        </div>
+<section>
+    <h2>Centric PLM Consultancy</h2>
+    <p>With years of hands-on experience in Centric PLM (Product Lifecycle Management), I can help you make the most of this powerful system. Whether you’re implementing it for the first time or fine-tuning existing processes, I’ll guide you every step of the way to streamline your product development and drive results.</p>
+</section>
 
-        <h2 class="section-title">Our Focus Areas</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Strategic Consulting</h3>
-                <ul style="list-style: none;">
-                    <li>• Digital Transformation Roadmaps</li>
-                    <li>• Regulatory Compliance Strategy</li>
-                    <li>• Sustainability Integration</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <h3>Technical Implementation</h3>
-                <ul style="list-style: none;">
-                    <li>• Product Data Management Systems</li>
-                    <li>• AI & Automation Solutions</li>
-                    <li>• Reporting Tools Integration</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <h3>Ongoing Support</h3>
-                <ul style="list-style: none;">
-                    <li>• Regulatory Updates</li>
-                    <li>• System Optimization</li>
-                    <li>• Training & Knowledge Transfer</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+<section>
+    <h2>Master Data Management</h2>
+    <p>Clean, reliable product master data is the backbone of any successful business. I’ll help you organize and optimize your data so you can work more efficiently, make better decisions, and avoid costly mistakes.</p>
+</section>
+
+<section>
+    <h2>EU Data Compliance and Sustainability Reporting</h2>
+    <p>Keeping up with EU regulations can be overwhelming, but I’ll make it easier. From ensuring your product data complies with current laws to supporting your sustainability reporting efforts, I’ll work with you to meet the requirements without the headache.</p>
+</section>
+
+<footer>
+    <p>© 2024 Lindqvist Konsult | <a href="https://lkkb.se">lkkb.se</a></p>
+</footer>
+
 </body>
 </html>
