@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Lindqvist - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #f4f4f9;
+            --secondary-bg: #ffffff;
+            --text-color: #333;
+            --secondary-text: #666;
+            --highlight-color: #757575;
+            --border-color: #dcdcdc;
+        }
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+    
+        body {
+            background: var(--primary-bg);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+    
+        .resume {
+            display: flex;
+            width: 900px;
+            background: var(--secondary-bg);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+    
+        .left-column {
+            background: var(--highlight-color);
+            color: #fff;
+            width: 25%;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+        }
+    
+        .photo {
+            width: 100px;
+            height: 100px;
+            background: var(--secondary-bg);
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    
+        .photo img {
+            width: 100%;
+            height: auto;
+        }
+    
+        .left-column h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+    
+        .left-column p {
+            font-size: 1rem;
+        }
+    
+        .section {
+            text-align: left;
+            width: 100%;
+            margin-top: 20px;
+        }
+    
+        .section h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 5px;
+            text-transform: uppercase;
+        }
+    
+        .section p,
+        .section li {
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+        }
+    
+        .section ul {
+            list-style-type: none;
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+    
+        .section ul li::before {
+            content: "•";
+            color: #fff;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+    
+        .skill-bar {
+            margin-top: 3px;
+            margin-bottom: 15px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .skill-bar span {
+            display: block;
+            height: 100%;
+            background: #fff;
+            border-radius: 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    
+        .right-column {
+            flex: 1;
+            padding: 20px;
+        }
+    
+        .right-column h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+    
+        .right-column p,
+        .right-column li {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+    
+        .experience-item {
+            margin-bottom: 15px;
+        }
+    
+        .experience-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+    
+        .experience-item p {
+            font-size: 0.9rem;
+            color: var(--secondary-text);
+            margin-bottom: 5px;
+        }
+    
+        ul {
+            padding-left: 20px;
+            list-style-type: none;
+            margin: 10px 0;
+        }
+    
+        ul li::before {
+            content: "•";
+            color: var(--secondary-text);
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+    
+        @media (max-width: 768px) {
+            .resume {
+                flex-direction: column;
+                width: auto;
+                margin: 0 15px;
+            }
+    
+            .left-column {
+                width: 100%;
+                padding: 15px;
+                text-align: center;
+            }
+    
+            .right-column {
+                padding: 15px;
+            }
+        }
+    </style>        
+</head>
+<body>
+    <div class="resume">
+        <!-- Left Column -->
+        <div class="left-column">
+            <div class="photo">
+                <img src="your-photo.jpg" alt="Profile Photo">
+            </div>
+            <h1>Max Lindqvist</h1>
+            <p>Business Consultant</p>
+            <div class="section">
+                <h2>Contact</h2>
+                <p>📧 max@lkkb.se</p>
+                <p>📍 Stockholm, Sweden</p>
+                <p>🔗 linkedin.com/in/m44</p>
+            </div>
+            <div class="section">
+                <h2>Skills</h2>
+                <div>
+                    <p>Excel</p>
+                    <div class="skill-bar"><span style="width: 90%;"></span></div>
+                </div>
+                <div>
+                    <p>Centric PLM</p>
+                    <div class="skill-bar"><span style="width: 85%;"></span></div>
+                </div>
+                <div>
+                    <p>Placeholder 1</p>
+                    <div class="skill-bar"><span style="width: 70%;"></span></div>
+                </div>
+                <div>
+                    <p>Placeholder 2</p>
+                    <div class="skill-bar"><span style="width: 75%;"></span></div>
+                </div>
+                <div>
+                    <p>Placeholder 3</p>
+                    <div class="skill-bar"><span style="width: 60%;"></span></div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Languages</h2>
+                <ul>
+                    <li>Swedish: Native</li>
+                    <li>English: Bilingual</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Education</h2>
+                <p>Bachelor's in Business Administration</p>
+                <p>Colorado Mesa University 2019</p>
+                <p>🏆 Varsity Tennis Player</p>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <section>
+                <h2>About Me</h2>
+                <p>PLM Implementation Expert and Digital Product Passport Consultant specializing in product data, EU compliance frameworks, and Digital Product Passport (DPP) readiness. Expert in Centric PLM, Regulatory Compliance, and Product Data Management.</p>
+            </section>
+            <section>
+                <h2>Focus Areas</h2>
+                <ul>
+                    <li>Centric PLM: Advanced system configuration and debugging</li>
+                    <li>Process Optimization: Custom timeline development using Notion</li>
+                    <li>Expert in: EU Regulatory Compliance, Digital Product Passport (DPP), Regulatory Documentation, Supply Chain Transparency</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Ongoing Project Developments</h2>
+                <div class="experience-item">
+                    <h3>agents.md</h3>
+                    <p>Placeholder text for description.</p>
+                </div>
+                <div class="experience-item">
+                    <h3>Product Profile</h3>
+                    <p>Placeholder text for description.</p>
+                </div>
+                <div class="experience-item">
+                    <h3>AI Copywriting and Translations</h3>
+                    <p>Placeholder text for description.</p>
+                </div>
+            </section>
+            <section>
+                <h2>Work Experience</h2>
+                <div class="experience-item">
+                    <h3>Business Consultant</h3>
+                    <p>Lindqvist Konsult, Freelance — (Jun 2024 - Present)</p>
+                    <ul>
+                        <li>Focus on product data and compliance, AI automations, and providing compliant AI access to companies.</li>
+                        <li>Skills: Artificial Intelligence (AI), Regulatory Compliance, Product Data Management (PDM)</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Product Process & Master Data Specialist</h3>
+                    <p>Haglöfs, Stockholm, Sweden — (Jan 2023 - Present)</p>
+                    <ul>
+                        <li>Centric PLM System Owner</li>
+                        <li>Product Process and Timeline Management</li>
+                        <li>Master Data and Product Sampling Specialist</li>
+                        <li>Skills: Centric PLM, Microsoft Excel, Project Management, PLM Tools, Product Lifecycle Management</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Product Process Controller</h3>
+                    <p>Haglöfs — (Apr 2022 - Jan 2023)</p>
+                    <ul>
+                        <li>Skills: Centric PLM, Microsoft Excel, Project Management, PLM Tools, Product Lifecycle Management</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Sourcing Coordinator</h3>
+                    <p>Haglöfs — (Jan 2022 - Apr 2022)</p>
+                    <ul>
+                        <li>Skills: Microsoft Excel</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Product Management Assistant</h3>
+                    <p>Haglöfs — (Sep 2020 - Apr 2022)</p>
+                    <ul>
+                        <li>Skills: Microsoft Excel</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
