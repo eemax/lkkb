@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     "./src/**/*.{html,js}"
+    "!./src/unformatted.html"
   ],
   theme: {
     extend: {
