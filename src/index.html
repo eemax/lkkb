@@ -7,205 +7,84 @@
     <meta name="description" content="Lindqvist Konsult offers personalized consultancy services, specializing in AI implementation and digital transformation for European businesses.">
     <meta name="keywords" content="Lindqvist Konsult, AI consultancy, digital transformation, EU data compliance, Centric PLM, master data management, sustainability reporting">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #333;
-            background-color: #f5f7fa;
-            line-height: 1.6;
-        }
-
-        /* Header Section */
-        header {
-            background: linear-gradient(135deg, #00b4d8, #0077b6);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-            position: relative;
-        }
-        header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-        }
-        header p {
-            font-size: 1.4rem;
-            opacity: 0.85;
-        }
-
-        /* Introduction Section */
-        .intro {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            background: white;
-            padding: 40px 20px;
-            margin: 30px auto;
-            border-radius: 16px;
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-            max-width: 1200px;
-        }
-        .intro-text {
-            flex: 1 1 60%;
-            padding-right: 25px;
-        }
-        .intro-text h2 {
-            font-size: 2rem;
-            color: #00b4d8;
-            margin-bottom: 15px;
-        }
-        .intro-text p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-        }
-        .cta-button {
-            flex: 1 1 30%;
-            text-align: center;
-            padding: 15px 0;
-            font-size: 1.1rem;
-            color: #0077b6;
-            background-color: white;
-            border: 2px solid #0077b6;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            width: 200px;
-            display: block;
-            margin: 0 auto;
-        }
-        .cta-button:hover {
-            color: white;
-            background-color: #00b4d8;
-            border-color: #00b4d8;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Content Sections */
-        section {
-            background: white;
-            padding: 40px 20px;
-            margin: 30px auto;
-            border-radius: 16px;
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-            max-width: 1200px;
-        }
-        section h2 {
-            color: #00b4d8;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-        section p {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-        }
-        section ul {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            padding-left: 25px;
-            list-style-type: disc;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #eef3f7;
-            font-size: 0.95rem;
-            margin-top: 25px;
-        }
-        footer a {
-            color: #00b4d8;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .intro {
-                flex-direction: column;
-                text-align: center;
-            }
-            .intro-text {
-                padding-right: 0;
-                margin-bottom: 20px;
-            }
-        }
-    </style>
+    <link href="styles/output.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-gradient-to-br from-brand-cyan-400 to-brand-cyan-600 text-white text-center py-16">
+        <h1 class="text-4xl font-bold">Lindqvist Konsult</h1>
+        <p class="text-xl mt-2 opacity-85">Personalized Consultancy for Modern Businesses</p>
+    </header>
 
-<header>
-    <h1>Lindqvist Konsult</h1>
-    <p>Personalized Consultancy for Modern Businesses</p>
-</header>
-
-<div class="intro">
-    <div class="intro-text">
-        <h2>Hi, I’m Max Lindqvist</h2>
-        <p>I’m the person behind Lindqvist Konsult. As a solopreneur, I work closely with my clients to provide practical, tailored solutions that make a real difference. My focus is on helping businesses thrive in today’s fast-paced, tech-driven world.</p>
-        <p>When you choose Lindqvist Konsult, you’re not just getting a consultant—you’re getting a dedicated partner who’s as invested in your success as you are. I keep things personal, practical, and tailored to your unique challenges.</p>
-        <p>Let’s have a conversation about how I can help your business move forward.</p>
+    <div class="max-w-6xl mx-auto px-4 mt-8">
+        <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-center gap-8">
+            <div class="flex-1">
+                <h2 class="text-2xl font-semibold text-brand-cyan-600 mb-4">Hi, I'm Max Lindqvist</h2>
+                <p class="text-lg mb-4">I'm the person behind Lindqvist Konsult. As a solopreneur, I work closely with my clients to provide practical, tailored solutions that make a real difference. My focus is on helping businesses thrive in today's fast-paced, tech-driven world.</p>
+                <p class="text-lg mb-4">When you choose Lindqvist Konsult, you're not just getting a consultant—you're getting a dedicated partner who's as invested in your success as you are. I keep things personal, practical, and tailored to your unique challenges.</p>
+                <p class="text-lg">Let's have a conversation about how I can help your business move forward.</p>
+            </div>
+            <a href="https://lkkb.se/cv" class="inline-block px-6 py-3 bg-brand-cyan-600 text-white rounded-full hover:bg-brand-cyan-400 transition-colors duration-300">
+                View My CV
+            </a>
+        </div>
     </div>
-    <a href="https://lkkb.se/cv" class="cta-button">View My CV</a>
-</div>
 
-<section>
-    <h2>Centric PLM, Master Data Management, Product and Sustainability Reporting, EU Compliance</h2>
-    <p>With years of daily hands-on experience in Centric PLM and product data, I can help make the best decisions and get things done with:</p>
-    <ul>
-        <li>Centric PLM configurations, implementations, processes, and general best practices</li>
-        <li>Master data structure to optimize for: systems, development workflow efficiency, reporting, and compliance</li>
-        <li>Product data & sustainability reporting</li>
-        <li>Digital Product Passport implementation</li>
-        <li>Main experience in fashion, apparel, footwear, and hardgoods</li>
-    </ul>
-</section>
+    <div class="max-w-6xl mx-auto px-4 mt-8">
+        <div class="bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-2xl text-brand-cyan-600 mb-4">Centric PLM, Master Data Management, Product and Sustainability Reporting, EU Compliance</h2>
+            <p class="text-lg mb-4">With years of daily hands-on experience in Centric PLM and product data, I can help make the best decisions and get things done with:</p>
+            <ul class="list-disc pl-5 space-y-2 text-lg">
+                <li>Centric PLM configurations, implementations, processes, and general best practices</li>
+                <li>Master data structure to optimize for: systems, development workflow efficiency, reporting, and compliance</li>
+                <li>Product data & sustainability reporting</li>
+                <li>Digital Product Passport implementation</li>
+                <li>Main experience in fashion, apparel, footwear, and hardgoods</li>
+            </ul>
+        </div>
+    </div>
 
-<section>
-    <h2>Product Profile - Innovative Custom Digital Product Passport Solution with Customer Data Collection, Product Unique Identifiers, and Digital Engravings</h2>
-    <p>Digital product passports are the future of compliance and transparency, and I can help you get there. I’ll take your product data and transform it into compliant <strong>Digital Product Profiles</strong>, ready to meet the latest standards. Want to take it further? I can help you engrave these profiles onto unique product identifiers for full traceability and customer trust.</p>
-    <ul>
-        <li>Conversion of existing company data to compliant digital product passports</li>
-        <li>Product & sustainability data reporting</li>
-        <li>Digitally engrave products with repair details, user activity, and more</li>
-        <li>Customer data collection as part of having unique product identifiers</li>
-        <li>Product data consultancy to comply with upcoming changes to EU regulation</li>
-    </ul>
-</section>
+    <div class="max-w-6xl mx-auto px-4 mt-8">
+        <div class="bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-2xl text-brand-cyan-600 mb-4">Product Profile - Innovative Custom Digital Product Passport Solution with Customer Data Collection, Product Unique Identifiers, and Digital Engravings</h2>
+            <p class="text-lg mb-4">Digital product passports are the future of compliance and transparency, and I can help you get there. I'll take your product data and transform it into compliant <strong class="text-brand-cyan-600">Digital Product Profiles</strong>, ready to meet the latest standards. Want to take it further? I can help you engrave these profiles onto unique product identifiers for full traceability and customer trust.</p>
+            <ul class="list-disc pl-5 space-y-2 text-lg">
+                <li>Conversion of existing company data to compliant digital product passports</li>
+                <li>Product & sustainability data reporting</li>
+                <li>Digitally engrave products with repair details, user activity, and more</li>
+                <li>Customer data collection as part of having unique product identifiers</li>
+                <li>Product data consultancy to comply with upcoming changes to EU regulation</li>
+            </ul>
+        </div>
+    </div>
 
-<section>
-    <h2>agents.md – Bring AI to Your Team</h2>
-    <p>AI can be a game-changer, and I’m here to make it simple for your business. With <strong>agents.md</strong>, I offer a complete service to help you roll out AI tools for your employees. Whether it’s:</p>
-    <ul>
-        <li>General-purpose chatbots to answer everyday questions,</li>
-        <li>AI agents like Perplexity to speed up research,</li>
-        <li>Productivity bots to save time on repetitive tasks, or</li>
-        <li>Custom-built agents with secure access to your company data,</li>
-    </ul>
-    <p>I’ll ensure everything is easy to use, secure, and perfectly tailored to your needs. Let’s get your team working smarter, not harder.</p>
-</section>
+    <div class="max-w-6xl mx-auto px-4 mt-8">
+        <div class="bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-2xl text-brand-cyan-600 mb-4">agents.md – Bring AI to Your Team</h2>
+            <p class="text-lg mb-4">AI can be a game-changer, and I'm here to make it simple for your business. With <strong class="text-brand-cyan-600">agents.md</strong>, I offer a complete service to help you roll out AI tools for your employees. Whether it's:</p>
+            <ul class="list-disc pl-5 space-y-2 text-lg">
+                <li>General-purpose chatbots to answer everyday questions,</li>
+                <li>AI agents like Perplexity to speed up research,</li>
+                <li>Productivity bots to save time on repetitive tasks, or</li>
+                <li>Custom-built agents with secure access to your company data,</li>
+            </ul>
+            <p class="text-lg mt-4">I'll ensure everything is easy to use, secure, and perfectly tailored to your needs. Let's get your team working smarter, not harder.</p>
+        </div>
+    </div>
 
-<section>
-    <h2>AI-Powered Copywriting and Translations</h2>
-    <p>Let AI handle writing product descriptions and translating them for different markets. I use the latest AI models to automate these tasks, creating consistent, high-quality content in no time. You’ll save time, reduce costs, and ensure your messaging works seamlessly across languages.</p>
-     <ul>
-        <li>Iterate on your texts in seconds</li>
-        <li>Let the AI do the drafting for you and convert your product data to product texts instantly</li>
-        <li>Product texts automated for a fraction of the cost</li>
-    </ul>
-</section>
+    <div class="max-w-6xl mx-auto px-4 mt-8">
+        <div class="bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-2xl text-brand-cyan-600 mb-4">AI-Powered Copywriting and Translations</h2>
+            <p class="text-lg mb-4">Let AI handle writing product descriptions and translating them for different markets. I use the latest AI models to automate these tasks, creating consistent, high-quality content in no time. You'll save time, reduce costs, and ensure your messaging works seamlessly across languages.</p>
+            <ul class="list-disc pl-5 space-y-2 text-lg">
+                <li>Iterate on your texts in seconds</li>
+                <li>Let the AI do the drafting for you and convert your product data to product texts instantly</li>
+                <li>Product texts automated for a fraction of the cost</li>
+            </ul>
+        </div>
+    </div>
 
-<footer>
-    <p>© 2024 Lindqvist Konsult | <a href="https://lkkb.se">lkkb.se</a></p>
-</footer>
-
+    <footer class="text-center py-4 bg-gray-200 mt-8">
+        <p class="text-sm">© 2024 Lindqvist Konsult | <a href="https://lkkb.se" class="text-brand-cyan-600 hover:underline">lkkb.se</a></p>
+    </footer>
 </body>
 </html>
