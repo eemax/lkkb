@@ -1,6 +1,16 @@
 {
+  "name": "lkkb",
+  "version": "1.0.0",
+  "description": "Lindqvist Konsult Website",
   "scripts": {
     "build:css": "tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css",
-    "watch:css": "tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch"
+    "watch:css": "tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch",
+    "dev": "npm run watch:css"
+  },
+  "author": "Max Lindqvist",
+  "devDependencies": {
+    "tailwindcss": "^3.3.0",
+    "postcss": "^8.4.0",
+    "autoprefixer": "^10.4.0"
   }
 }
