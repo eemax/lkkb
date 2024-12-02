@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom global styles */
+@layer base {
+  body {
+    @apply font-sans;
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  .section-card {
+    @apply bg-white rounded-xl shadow-lg p-6 md:p-8;
+  }
+
+  .btn-primary {
+    @apply inline-block px-6 py-3 
+           bg-brand-cyan-600 text-white 
+           rounded-full 
+           hover:bg-brand-cyan-400 
+           transition-colors duration-300;
+  }
+}
