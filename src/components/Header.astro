@@ -1,0 +1,33 @@
+---
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/cv", label: "CV" },
+];
+
+const pathname = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-40 border-b border-(--border) bg-(--bg)/80 backdrop-blur-md">
+  <div class="mx-auto flex h-14 max-w-3xl items-center justify-between px-6">
+    <a href="/" class="font-mono text-sm font-semibold tracking-tight no-underline">
+      Lindqvist Konsult
+    </a>
+
+    <nav class="flex items-center gap-5">
+      {navLinks.map(({ href, label }) => {
+        const isActive = pathname === href || (href !== "/" && pathname.startsWith(href));
+        return (
+          <a
+            href={href}
+            class:list={[
+              "text-sm no-underline transition-colors hover:text-(--fg)",
+              isActive ? "text-(--fg) font-medium" : "text-(--muted)",
+            ]}
+          >
+            {label}
+          </a>
+        );
+      })}
+    </nav>
+  </div>
+</header>

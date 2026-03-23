@@ -1,0 +1,120 @@
+---
+import ServiceCard from "../components/ServiceCard.astro";
+import { services } from "../data/services";
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Lindqvist Konsult">
+  <!-- Hero -->
+  <section class="mb-16 animate-fade-in">
+    <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">
+      Lindqvist Konsult
+    </h1>
+    <p class="mt-3 text-lg text-(--muted)">
+      PLM expertise, AI implementation, and digital transformation — tailored for your business.
+    </p>
+    <div class="mt-6 flex flex-wrap gap-3">
+      <a
+        href="#services"
+        class="inline-block rounded-md border border-(--fg) bg-(--fg) px-5 py-2 text-sm text-(--bg) no-underline transition-colors hover:bg-transparent hover:text-(--fg)"
+      >
+        See What I Do
+      </a>
+      <a
+        href="#contact"
+        class="inline-block rounded-md border border-(--border) px-5 py-2 text-sm no-underline transition-colors hover:bg-(--surface)"
+      >
+        Get in Touch
+      </a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="mb-16">
+    <div class="rounded-lg border border-(--border) p-6">
+      <h2 class="text-xl font-semibold">Hi, I'm Max Lindqvist</h2>
+      <p class="mt-3 leading-relaxed">
+        I'm the person behind Lindqvist Konsult. As a solopreneur, I work closely with my clients to provide practical, tailored solutions that make a real difference. My focus is on helping businesses thrive in today's fast-paced, tech-driven world.
+      </p>
+      <p class="mt-3 leading-relaxed">
+        When you choose Lindqvist Konsult, you're not just getting a consultant — you're getting a dedicated partner who's as invested in your success as you are.
+      </p>
+      <a
+        href="/cv"
+        class="mt-4 inline-block rounded-md border border-(--border) px-5 py-2 text-sm no-underline transition-colors hover:bg-(--surface)"
+      >
+        View My CV &rarr;
+      </a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="mb-16">
+    <h2 class="mb-6 font-mono text-sm font-semibold uppercase tracking-wider text-(--muted)">
+      Services
+    </h2>
+    <div class="grid gap-3 sm:grid-cols-2">
+      {services.map((service) => (
+        <ServiceCard {...service} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 class="mb-6 font-mono text-sm font-semibold uppercase tracking-wider text-(--muted)">
+      Get in Touch
+    </h2>
+    <div class="rounded-lg border border-(--border) p-6">
+      <p class="leading-relaxed">
+        Interested in working together? I'd love to hear about your project. Reach out and let's talk.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a
+          href="mailto:max@lkkb.se"
+          class="inline-block rounded-md border border-(--fg) bg-(--fg) px-5 py-2 text-sm text-(--bg) no-underline transition-colors hover:bg-transparent hover:text-(--fg)"
+        >
+          max@lkkb.se
+        </a>
+        <a
+          href="https://linkedin.com/in/m44"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block rounded-md border border-(--border) px-5 py-2 text-sm no-underline transition-colors hover:bg-(--surface)"
+        >
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Lindqvist Konsult",
+    "url": "https://lkkb.se",
+    "description": "Personalized consultancy for modern businesses — PLM, AI, and digital transformation.",
+    "founder": {
+      "@type": "Person",
+      "name": "Max Lindqvist",
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Stockholm",
+      "addressCountry": "SE",
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Consulting Services",
+      "itemListElement": services.map((s) => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": s.name,
+          "description": s.description,
+        },
+      })),
+    },
+  })} />
+</Base>

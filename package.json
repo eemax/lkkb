@@ -1,16 +1,27 @@
 {
   "name": "lkkb",
+  "type": "module",
   "version": "1.0.0",
   "description": "Lindqvist Konsult Website",
-  "scripts": {
-    "build:css": "tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css",
-    "watch:css": "tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch",
-    "dev": "npm run watch:css"
-  },
   "author": "Max Lindqvist",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.1",
+    "@fontsource-variable/inter": "^5.1.1",
+    "@tailwindcss/vite": "^4.2.2",
+    "astro": "^6.0.8",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^5.9.3"
+  },
   "devDependencies": {
-    "tailwindcss": "^3.3.0",
-    "postcss": "^8.4.0",
-    "autoprefixer": "^10.4.0"
+    "@biomejs/biome": "^2.4.8"
   }
 }

@@ -1,0 +1,147 @@
+---
+import {
+  contact,
+  education,
+  experience,
+  focusAreas,
+  languages,
+  skills,
+} from "../data/cv";
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="CV" description="Max Lindqvist — Business Consultant specializing in Centric PLM, AI, and digital transformation.">
+  <article>
+    <!-- Header -->
+    <header class="mb-16">
+      <div class="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
+        <img
+          src={contact.image}
+          alt={contact.name}
+          class="h-24 w-24 rounded-full object-cover"
+        />
+        <div>
+          <h1 class="text-3xl font-bold tracking-tight">{contact.name}</h1>
+          <p class="mt-1 text-lg text-(--muted)">{contact.title}</p>
+          <div class="mt-3 flex flex-wrap gap-4 text-sm text-(--muted)">
+            <span>{contact.email}</span>
+            <span>{contact.location}</span>
+            <a href={contact.website}>lkkb.se</a>
+            <a href={contact.linkedin}>linkedin.com/in/m44</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Focus Areas -->
+    <section id="focus" class="mb-16">
+      <h2 class="mb-4 font-mono text-sm font-semibold uppercase tracking-wider text-(--muted)">
+        Focus Areas
+      </h2>
+      <ul class="space-y-1 text-sm">
+        {focusAreas.map((area) => (
+          <li class="flex gap-2">
+            <span class="text-(--muted)">-</span>
+            <span>{area}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="mb-16">
+      <h2 class="mb-4 font-mono text-sm font-semibold uppercase tracking-wider text-(--muted)">
+        Skills
+      </h2>
+      <div class="space-y-2">
+        {skills.map((skill) => (
+          <div class="flex items-center justify-between text-sm">
+            <span>{skill.name}</span>
+            <span class="rounded-full border border-(--border) px-2 py-0.5 font-mono text-xs text-(--muted)">
+              {skill.level}
+            </span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section id="experience" class="mb-16">
+      <h2 class="mb-4 font-mono text-sm font-semibold uppercase tracking-wider text-(--muted)">
+        Work Experience
+      </h2>
+      <div class="space-y-6">
+        {experience.map((job) => (
+          <div class="border-l-2 border-(--border) pl-4">
+            <h3 class="font-semibold">{job.title}</h3>
+            <p class="text-sm text-(--muted)">{job.company} — {job.period}</p>
+            <ul class="mt-2 space-y-1 text-sm">
+              {job.points.map((point) => (
+                <li class="flex gap-2">
+                  <span class="text-(--muted)">-</span>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="mb-16">
+      <h2 class="mb-4 font-mono text-sm font-semibold uppercase tracking-wider text-(--muted)">
+        Education
+      </h2>
+      {education.map((edu) => (
+        <div class="border-l-2 border-(--border) pl-4">
+          <h3 class="font-semibold">{edu.degree}</h3>
+          <p class="text-sm text-(--muted)">{edu.institution}, {edu.year}</p>
+          {edu.note && <p class="mt-1 text-sm text-(--muted)">{edu.note}</p>}
+        </div>
+      ))}
+    </section>
+
+    <!-- Languages -->
+    <section id="languages">
+      <h2 class="mb-4 font-mono text-sm font-semibold uppercase tracking-wider text-(--muted)">
+        Languages
+      </h2>
+      <div class="flex gap-6 text-sm">
+        {languages.map((lang) => (
+          <div>
+            <span class="font-medium">{lang.name}</span>
+            <span class="text-(--muted)"> — {lang.proficiency}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  </article>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": contact.name,
+    "jobTitle": contact.title,
+    "url": contact.website,
+    "email": `mailto:${contact.email}`,
+    "image": `${contact.website}${contact.image}`,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Stockholm",
+      "addressCountry": "SE",
+    },
+    "sameAs": [contact.linkedin],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Lindqvist Konsult",
+      "url": contact.website,
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Colorado Mesa University",
+    },
+    "knowsAbout": ["Centric PLM", "Master Data", "AI", "Digital Product Passport", "EU Compliance"],
+  })} />
+</Base>
