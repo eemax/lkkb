@@ -13,63 +13,75 @@ export interface Experience {
 export interface Education {
   degree: string;
   institution: string;
-  year: string;
   note?: string;
 }
 
-export interface Language {
-  name: string;
-  proficiency: string;
-}
-
 export const skills: Skill[] = [
-  { name: "Excel", level: "Expert" },
   { name: "Centric PLM", level: "Expert" },
-  { name: "AI Productivity", level: "Expert" },
-  { name: "Master Data Compliance", level: "Advanced" },
-  { name: "Power BI", level: "Intermediate" },
+  { name: "Product Master Data", level: "Expert" },
+  { name: "Data Governance", level: "Expert" },
+  { name: "BOM, SKU & Item Data", level: "Expert" },
+  { name: "System Mapping & Integrations", level: "Advanced" },
+  { name: "Data Engineering", level: "Advanced" },
+  { name: "AI Engineering & Automation", level: "Advanced" },
 ];
 
 export const experience: Experience[] = [
   {
-    title: "Business Consultant",
+    title: "PLM & Product Master Data",
+    company: "New Wave Group",
+    period: "Current",
+    points: [
+      "Work across Centric PLM, product master data, traceability, compliance, and Digital Product Passport readiness in a multi-brand product environment",
+      "Structure and govern product information across development, sourcing, ERP, reporting, traceability, and compliance workflows",
+      "Translate product, compliance, and traceability requirements into data models, system logic, data flows, validation logic, and scalable implementation concepts",
+      "Work with BOM structures, SKU and item data, material and supplier information, product classifications, system mappings, data quality, and semantic mapping",
+    ],
+  },
+  {
+    title: "Data Engineer",
     company: "Lindqvist Konsult, Freelance",
     period: "Jun 2024 - Present",
     points: [
-      "Product Profile, AI Agents & Automation, AI automations, Centric PLM, master data, EU reporting compliance",
-      "Providing value to companies through data excellence and cutting edge AI",
+      "Build and experiment with Python, APIs, structured data, data pipelines, system integrations, workflow automation, and AI-ready knowledge structures",
+      "Design practical AI agents and agentic workflows that connect business data, automation, and applied AI engineering",
+      "Explore how modern data and AI systems can be connected, automated, and scaled across product and operational workflows",
     ],
   },
   {
     title: "Product Process & Master Data Specialist",
-    company: "Haglofs, Stockholm, Sweden",
+    company: "Haglöfs, Stockholm, Sweden",
     period: "Jan 2023 - Jun 2024",
     points: [
-      "Centric PLM: Advanced system configuration and master data structure specialist",
-      "Product process, product sampling, and timeline management",
-      "Product master data systems integration",
+      "Owned advanced Centric PLM configuration, product data structures, and process improvements across product creation",
+      "Managed sampling workflows, seasonal timelines, and cross-functional product process coordination",
+      "Improved product data flows between PLM, PIM, ERP, and reporting systems",
     ],
   },
   {
     title: "Product Process Controller",
-    company: "Haglofs, Stockholm, Sweden",
+    company: "Haglöfs, Stockholm, Sweden",
     period: "Apr 2022 - Jan 2023",
     points: [
-      "Centric PLM system owner, project management, process optimization, custom timeline development",
+      "Served as Centric PLM system owner for process setup, project coordination, and custom timeline development",
+      "Translated business needs into clearer workflows, cleaner data structures, and more reliable system usage",
     ],
   },
   {
     title: "Sourcing Coordinator",
-    company: "Haglofs, Stockholm, Sweden",
+    company: "Haglöfs, Stockholm, Sweden",
     period: "Jan 2022 - Apr 2022",
-    points: ["Product sourcing & reporting, sustainability reporting"],
+    points: [
+      "Supported product sourcing, supplier reporting, sustainability reporting, and operational follow-up",
+    ],
   },
   {
     title: "Product Management Assistant",
-    company: "Haglofs, Stockholm, Sweden",
+    company: "Haglöfs, Stockholm, Sweden",
     period: "Sep 2020 - Apr 2022",
     points: [
-      "Excel admin, master data admin, ERP & PIM admin, product color analysis",
+      "Maintained product data across PLM, ERP, and PIM while supporting product managers with analysis and administration",
+      "Prepared product color analysis, seasonal data updates, and reporting for collection development",
     ],
   },
 ];
@@ -78,26 +90,23 @@ export const education: Education[] = [
   {
     degree: "Bachelor's in Business Administration",
     institution: "Colorado Mesa University",
-    year: "2019",
     note: "Varsity Tennis Player",
   },
 ];
 
-export const languages: Language[] = [
-  { name: "Swedish", proficiency: "Native" },
-  { name: "English", proficiency: "Bilingual" },
-];
-
 export const focusAreas = [
-  "Centric PLM & master data consultancy",
-  "Affordable and customized AI access for businesses",
-  "EU regulatory compliance, product & sustainability reporting, Digital Product Passport (DPP)",
+  "PLM and product data governance across complex multi-system product environments",
+  "Product data models, BOM structures, SKU and item data, material and supplier information, and product classifications",
+  "Traceability, compliance data, Digital Product Passport readiness, validation logic, and semantic mapping",
+  "Data engineering, APIs, ETL/ELT workflows, automation, AI agents, and AI-ready product data structures",
 ];
 
 export const contact = {
   name: "Max Lindqvist",
-  title: "Business Consultant",
-  email: "max@lkkb.se",
+  headline: "PLM & Product Master Data @ New Wave Group",
+  summary:
+    "I work with product data models, BOM structures, SKU and item data, material and supplier information, product classifications, system mappings, validation logic, and data governance — solving the practical challenge of keeping complex product data consistent, traceable, and usable across multiple business systems.",
+  email: "max.lindqvist@me.com",
   location: "Stockholm, Sweden",
   website: "https://lkkb.se",
   linkedin: "https://linkedin.com/in/m44",

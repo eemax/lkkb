@@ -8,56 +8,56 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    name: "Centric PLM & Master Data",
+    name: "Working With Data",
+    tagline: "Cleaning up the messy layer between systems, teams, and tools",
+    description:
+      "Available for work that turns messy business data into something reliable, usable, and ready for the next system, report, workflow, or product decision.",
+    features: [
+      "Python, APIs, JSON, structured data, exports, and imports",
+      "Extracting, transforming, validating, mapping, enriching, and connecting data",
+      "Data quality improvements for reporting, automation, and downstream tools",
+      "Product, supplier, material, SKU, item, BOM, and classification data",
+    ],
+    tags: ["data", "apis", "systems"],
+  },
+  {
+    name: "Software With AI Leverage",
+    tagline: "Fast, careful building across whatever stack the work needs",
+    description:
+      "I use AI as a serious development amplifier: to understand codebases faster, build across unfamiliar stacks, automate repetitive work, and ship useful software without turning every project into an AI demo.",
+    features: [
+      "AI-leveraged development across existing codebases, tools, and languages",
+      "Agents, workflow automation, structured prompts, and tool integrations",
+      "Practical AI systems that work with real data and real constraints",
+      "Fast prototyping, implementation support, and technical problem solving",
+    ],
+    tags: ["software", "ai-leverage", "automation"],
+  },
+  {
+    name: "PLM & Product Master Data",
     tagline:
-      "Centric PLM and master data expertise from 4 years of working with it daily",
+      "Deep product data knowledge from apparel, footwear, bags, and consumer goods",
     description:
-      "With years of daily hands-on experience in Centric PLM and product data, I can help make the best decisions and get things done.",
+      "I work at the layer between product teams, business systems, compliance requirements, and technical implementation, especially where complex product data needs to stay consistent and traceable.",
     features: [
-      "Centric PLM configurations, implementations, processes, and general best practices",
-      "Master data structure to optimize for: systems, development workflow efficiency, reporting, and compliance",
-      "Product data & sustainability reporting",
-      "Digital Product Passport implementation",
-      "Main experience in fashion, apparel, footwear, and hardgoods",
+      "Centric PLM structures, workflows, data models, and system mappings",
+      "BOM, material, supplier, SKU, item, and product classification data",
+      "PLM/ERP alignment, reporting foundations, and downstream data flows",
+      "Digital Product Passport readiness, traceability, and compliance data",
     ],
-    tags: ["plm", "master-data", "compliance"],
+    tags: ["plm", "product-data", "dpp"],
   },
   {
-    name: "Product Profile",
-    tagline: "Innovative Custom Digital Product Passport Solution",
+    name: "Automation & Internal Tools",
+    tagline: "Small tools that remove repeated manual work",
     description:
-      "Digital product passports are the future of compliance and transparency. I'll take your product data and transform it into compliant Digital Product Profiles, ready to meet the latest standards.",
+      "I build practical automations and internal tools for teams that need leverage without a large platform project. The goal is simple: fewer manual handoffs, cleaner data, and faster execution.",
     features: [
-      "Conversion of existing company data to compliant digital product passports",
-      "Product unique identifiers and digital engravings",
-      "Customer data collection as part of having unique product identifiers",
-      "Product data consultancy to comply with upcoming changes to EU regulation",
+      "Workflow automation around spreadsheets, APIs, exports, and recurring tasks",
+      "Internal data tools, scripts, prototypes, and AI-ready knowledge structures",
+      "System-to-system handoffs where standard integrations are missing",
+      "Clear documentation and maintainable handover for the team",
     ],
-    tags: ["dpp", "compliance", "eu-regulation"],
-  },
-  {
-    name: "AI Agents & Automation",
-    tagline: "Bring AI to Your Team",
-    description:
-      "AI can be a game-changer, and I'm here to make it simple for your business. I offer a complete service to help you roll out AI tools for your employees.",
-    features: [
-      "General-purpose chatbots to answer everyday questions",
-      "AI agents like Perplexity to speed up research",
-      "Productivity bots to save time on repetitive tasks",
-      "Custom-built agents with secure access to your company data",
-    ],
-    tags: ["ai", "chatbots", "productivity"],
-  },
-  {
-    name: "AI Copywriting & Translations",
-    tagline: "Cheap, fast, and custom AI copywriting",
-    description:
-      "Let AI handle writing product descriptions and translating them for different markets. I use the latest AI models to automate these tasks, creating consistent, high-quality content in no time.",
-    features: [
-      "Iterate on your texts in seconds",
-      "Convert your product data to product texts instantly",
-      "Product texts automated for a fraction of the cost",
-    ],
-    tags: ["ai", "copywriting", "automation"],
+    tags: ["automation", "tools", "operations"],
   },
 ];

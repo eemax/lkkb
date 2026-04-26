@@ -12,12 +12,12 @@ interface Props {
 
 const {
   title,
-  description = "Lindqvist Konsult offers personalized consultancy services, specializing in AI implementation and digital transformation for European businesses.",
+  description = "Max Lindqvist is available for work with data, software development with AI leverage, automation, integrations, and product systems.",
   image,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const siteTitle = "Lindqvist Konsult";
+const siteTitle = "Max Lindqvist";
 const fullTitle = title === siteTitle ? title : `${title} — ${siteTitle}`;
 const ogImage = image
   ? new URL(image, Astro.site)

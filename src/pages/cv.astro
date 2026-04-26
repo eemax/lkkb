@@ -1,30 +1,22 @@
 ---
-import {
-  contact,
-  education,
-  experience,
-  focusAreas,
-  languages,
-  skills,
-} from "../data/cv";
+import { contact, education, experience, focusAreas, skills } from "../data/cv";
 import Base from "../layouts/Base.astro";
 ---
 
-<Base title="CV" description="Max Lindqvist — Business Consultant specializing in Centric PLM, AI, and digital transformation.">
+<Base title="CV" description="Max Lindqvist — PLM, product master data, data engineering, automation, and AI workflows.">
   <article class="cv-article">
     <!-- Header -->
-    <header class="mb-8">
-      <div class="flex flex-col items-center gap-5 sm:flex-row sm:items-start">
+    <header class="mb-6">
+      <div class="flex flex-col items-center gap-4 sm:flex-row sm:items-start">
         <img
           src={contact.image}
           alt={contact.name}
-          class="h-20 w-20 rounded-full object-cover"
+          class="h-18 w-18 rounded-full object-cover"
         />
         <div class="flex-1">
           <div class="flex items-start justify-between">
             <div>
               <h1 class="text-2xl font-bold tracking-tight">{contact.name}</h1>
-              <p class="mt-0.5 text-(--muted)">{contact.title}</p>
             </div>
             <button
               id="download-pdf"
@@ -34,18 +26,25 @@ import Base from "../layouts/Base.astro";
               Download PDF
             </button>
           </div>
-          <div class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--muted)">
+          <div class="mt-1.5 flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--muted)">
             <span>{contact.email}</span>
             <span>{contact.location}</span>
-            <a href={contact.website}>lkkb.se</a>
             <a href={contact.linkedin}>linkedin.com/in/m44</a>
           </div>
         </div>
       </div>
     </header>
 
+    <!-- Profile -->
+    <section id="profile" class="mb-5">
+      <h2 class="mb-2 font-mono text-xs font-semibold uppercase tracking-wider text-(--muted)">
+        Profile
+      </h2>
+      <p class="text-sm leading-relaxed">{contact.summary}</p>
+    </section>
+
     <!-- Focus Areas -->
-    <section id="focus" class="mb-6">
+    <section id="focus" class="mb-5">
       <h2 class="mb-2 font-mono text-xs font-semibold uppercase tracking-wider text-(--muted)">
         Focus Areas
       </h2>
@@ -59,44 +58,29 @@ import Base from "../layouts/Base.astro";
       </ul>
     </section>
 
-    <!-- Skills & Languages (side by side) -->
-    <section class="mb-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
-      <div>
-        <h2 class="mb-2 font-mono text-xs font-semibold uppercase tracking-wider text-(--muted)">
-          Skills
-        </h2>
-        <div class="space-y-1">
-          {skills.map((skill) => (
-            <div class="flex items-center justify-between text-sm">
-              <span>{skill.name}</span>
-              <span class="rounded-full border border-(--border) px-2 py-0.5 font-mono text-xs text-(--muted)">
-                {skill.level}
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div>
-        <h2 class="mb-2 font-mono text-xs font-semibold uppercase tracking-wider text-(--muted)">
-          Languages
-        </h2>
-        <div class="space-y-1 text-sm">
-          {languages.map((lang) => (
-            <div>
-              <span class="font-medium">{lang.name}</span>
-              <span class="text-(--muted)"> — {lang.proficiency}</span>
-            </div>
-          ))}
-        </div>
+    <!-- Skills -->
+    <section class="mb-5">
+      <h2 class="mb-2 font-mono text-xs font-semibold uppercase tracking-wider text-(--muted)">
+        Skills
+      </h2>
+      <div class="grid grid-cols-1 gap-x-6 gap-y-1 sm:grid-cols-2">
+        {skills.map((skill) => (
+          <div class="flex items-center justify-between gap-4 text-sm">
+            <span>{skill.name}</span>
+            <span class="shrink-0 rounded-full border border-(--border) px-2 py-0.5 font-mono text-xs text-(--muted)">
+              {skill.level}
+            </span>
+          </div>
+        ))}
       </div>
     </section>
 
     <!-- Work Experience -->
-    <section id="experience" class="mb-6">
+    <section id="experience" class="mb-5">
       <h2 class="mb-2 font-mono text-xs font-semibold uppercase tracking-wider text-(--muted)">
         Work Experience
       </h2>
-      <div class="space-y-4">
+      <div class="space-y-3">
         {experience.map((job) => (
           <div class="border-l-2 border-(--border) pl-4">
             <div class="flex items-baseline justify-between gap-4">
@@ -124,10 +108,7 @@ import Base from "../layouts/Base.astro";
       </h2>
       {education.map((edu) => (
         <div class="border-l-2 border-(--border) pl-4">
-          <div class="flex items-baseline justify-between gap-4">
-            <h3 class="font-semibold">{edu.degree}</h3>
-            <span class="shrink-0 text-sm text-(--muted)">{edu.year}</span>
-          </div>
+          <h3 class="font-semibold">{edu.degree}</h3>
           <p class="text-sm text-(--muted)">{edu.institution}</p>
           {edu.note && <p class="mt-0.5 text-sm text-(--muted)">{edu.note}</p>}
         </div>
@@ -139,7 +120,12 @@ import Base from "../layouts/Base.astro";
   <script>
     document.addEventListener("astro:page-load", () => {
       document.getElementById("download-pdf")?.addEventListener("click", () => {
+        const title = document.title;
+        document.title = " ";
         window.print();
+        window.setTimeout(() => {
+          document.title = title;
+        }, 500);
       });
     });
   </script>
@@ -149,7 +135,8 @@ import Base from "../layouts/Base.astro";
     "@context": "https://schema.org",
     "@type": "Person",
     "name": contact.name,
-    "jobTitle": contact.title,
+    "jobTitle": contact.headline,
+    "description": contact.summary,
     "url": contact.website,
     "email": `mailto:${contact.email}`,
     "image": `${contact.website}${contact.image}`,
@@ -161,13 +148,12 @@ import Base from "../layouts/Base.astro";
     "sameAs": [contact.linkedin],
     "worksFor": {
       "@type": "Organization",
-      "name": "Lindqvist Konsult",
-      "url": contact.website,
+      "name": "New Wave Group",
     },
     "alumniOf": {
       "@type": "CollegeOrUniversity",
       "name": "Colorado Mesa University",
     },
-    "knowsAbout": ["Centric PLM", "Master Data", "AI", "Digital Product Passport", "EU Compliance"],
+    "knowsAbout": ["Centric PLM", "Product Master Data", "Data Governance", "Data Engineering", "AI Engineering", "Digital Product Passport", "Traceability", "EU Compliance"],
   })} />
 </Base>

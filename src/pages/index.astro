@@ -4,12 +4,15 @@ import { services } from "../data/services";
 import Base from "../layouts/Base.astro";
 ---
 
-<Base title="Lindqvist Konsult">
+<Base title="Max Lindqvist">
   <!-- Hero -->
   <section class="mb-16 animate-fade-in">
     <h1 class="text-2xl font-bold tracking-tight sm:text-3xl">
-      PLM expertise, AI implementation, and digital transformation — tailored for your business.
+      Working with data, systems, and software with AI leverage.
     </h1>
+    <p class="mt-5 max-w-2xl text-base leading-relaxed text-(--muted)">
+      Open to hands-on roles and contract projects where messy data, internal tools, integrations, automation, or existing codebases need someone who can learn fast, build carefully, and use AI well without making the work weird.
+    </p>
     <div class="mt-6 flex flex-wrap gap-3">
       <a
         href="#services"
@@ -23,6 +26,21 @@ import Base from "../layouts/Base.astro";
       >
         Get in Touch
       </a>
+    </div>
+  </section>
+
+  <!-- Positioning -->
+  <section class="mb-16">
+    <h2 class="mb-6 font-mono text-sm font-semibold uppercase tracking-wider text-(--muted)">
+      What I Am Useful For
+    </h2>
+    <div class="space-y-4 text-sm leading-relaxed">
+      <p>
+        I work well in the layer between business data, software, and execution: APIs, structured data, validation logic, system mapping, AI workflows, and the practical glue that makes tools talk to each other.
+      </p>
+      <p>
+        My background is product-heavy, with deep experience in PLM, product master data, traceability, compliance, and Digital Product Passports. The direction now is broader: working with data and building useful software with Python, APIs, automation, AI agents, and AI-assisted development across different stacks and project types.
+      </p>
     </div>
   </section>
 
@@ -45,14 +63,14 @@ import Base from "../layouts/Base.astro";
     </h2>
     <div class="rounded-lg border border-(--border) p-6">
       <p class="leading-relaxed">
-        Interested in working together? I'd love to hear about your project. Reach out and let's talk.
+        Hiring for a role or project around data, software, integrations, automation, or product systems? Send a short note about the project, stack, and where things are stuck.
       </p>
       <div class="mt-6 flex flex-wrap gap-3">
         <a
-          href="mailto:max@lkkb.se"
+          href="mailto:max.lindqvist@me.com"
           class="inline-block rounded-md border border-(--fg) bg-(--fg) px-5 py-2 text-sm text-(--bg) no-underline transition-colors hover:bg-transparent hover:text-(--fg)"
         >
-          max@lkkb.se
+          max.lindqvist@me.com
         </a>
         <a
           href="https://linkedin.com/in/m44"
@@ -69,30 +87,17 @@ import Base from "../layouts/Base.astro";
   <!-- JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Lindqvist Konsult",
+    "@type": "Person",
+    "name": "Max Lindqvist",
     "url": "https://lkkb.se",
-    "description": "Personalized consultancy for modern businesses — PLM, AI, and digital transformation.",
-    "founder": {
-      "@type": "Person",
-      "name": "Max Lindqvist",
-    },
+    "description": "Available for work with data, software development with AI leverage, automation, integrations, and product systems.",
+    "email": "mailto:max.lindqvist@me.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Stockholm",
       "addressCountry": "SE",
     },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Consulting Services",
-      "itemListElement": services.map((s) => ({
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": s.name,
-          "description": s.description,
-        },
-      })),
-    },
+    "sameAs": ["https://linkedin.com/in/m44"],
+    "knowsAbout": services.map((s) => s.name),
   })} />
 </Base>
