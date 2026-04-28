@@ -106,7 +106,6 @@ export const contact = {
   headline: "PLM & Product Master Data @ New Wave Group",
   summary:
     "I work with product data models, BOM structures, SKU and item data, material and supplier information, product classifications, system mappings, validation logic, and data governance — solving the practical challenge of keeping complex product data consistent, traceable, and usable across multiple business systems.",
-  emailDisplay: "max.lindqvist [at] me.com",
   location: "Stockholm, Sweden",
   website: "https://lkkb.se",
   linkedin: "https://linkedin.com/in/m44",
