@@ -1,5 +1,6 @@
 ---
 import ServiceCard from "../components/ServiceCard.astro";
+import { contact } from "../data/cv";
 import { services } from "../data/services";
 import Base from "../layouts/Base.astro";
 ---
@@ -67,19 +68,16 @@ import Base from "../layouts/Base.astro";
       </p>
       <div class="mt-6 flex flex-wrap gap-3">
         <a
-          href="mailto:max.lindqvist@me.com"
-          class="inline-block rounded-md border border-(--fg) bg-(--fg) px-5 py-2 text-sm text-(--bg) no-underline transition-colors hover:bg-transparent hover:text-(--fg)"
-        >
-          max.lindqvist@me.com
-        </a>
-        <a
-          href="https://linkedin.com/in/m44"
+          href={contact.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-block rounded-md border border-(--border) px-5 py-2 text-sm no-underline transition-colors hover:bg-(--surface)"
+          class="inline-block rounded-md border border-(--fg) bg-(--fg) px-5 py-2 text-sm text-(--bg) no-underline transition-colors hover:bg-transparent hover:text-(--fg)"
         >
           LinkedIn
         </a>
+        <span class="inline-block rounded-md border border-(--border) px-5 py-2 text-sm text-(--muted)">
+          {contact.emailDisplay}
+        </span>
       </div>
     </div>
   </section>
@@ -88,16 +86,15 @@ import Base from "../layouts/Base.astro";
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Max Lindqvist",
-    "url": "https://lkkb.se",
+    "name": contact.name,
+    "url": contact.website,
     "description": "Available for work with data, software development with AI leverage, automation, integrations, and product systems.",
-    "email": "mailto:max.lindqvist@me.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Stockholm",
       "addressCountry": "SE",
     },
-    "sameAs": ["https://linkedin.com/in/m44"],
+    "sameAs": [contact.linkedin],
     "knowsAbout": services.map((s) => s.name),
   })} />
 </Base>

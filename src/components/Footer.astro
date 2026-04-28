@@ -1,12 +1,14 @@
+---
+import { contact } from "../data/cv";
+---
+
 <footer class="border-t border-(--border) py-10">
   <div class="mx-auto flex max-w-3xl flex-col items-center gap-4 px-6 text-sm text-(--muted)">
     <div class="flex gap-6">
-      <a href="https://linkedin.com/in/m44" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-(--fg)">
+      <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-(--fg)">
         LinkedIn
       </a>
-      <a href="mailto:max.lindqvist@me.com" class="transition-colors hover:text-(--fg)">
-        max.lindqvist@me.com
-      </a>
+      <span>{contact.emailDisplay}</span>
     </div>
   </div>
 </footer>
